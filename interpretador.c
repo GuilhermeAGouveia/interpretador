@@ -10,6 +10,19 @@ void clean(int *arr, int arr_size)
     };
 }
 
+int resolv_program(char memory[][1000][4])
+{
+    int registers[10];
+    clean(registers, 1000);
+    char instruction[4];
+
+    int count = 0;
+
+    // printf("%s", memory[3]);
+
+    return 10;
+}
+
 void printArr(int *arr, int arr_size)
 {
     for (int i = 0; i < arr_size; i++)
@@ -22,34 +35,22 @@ void main(void)
 {
     int n_programs, tmp, count = 0, n_instructions;
     char string[4];
-    char tmp;
     char memory[1000][4];
 
     scanf("%d", &n_programs);
 
     for (int i = 0; i < n_programs; i++)
     {
-        scanf("%c", tmp);
+        scanf("%s", string);
         while (1)
         {
-            printf("%c", tmp);
-            if (tmp == '\n')
-            {
-                scanf("%c", tmp);
-                if (tmp == '\n')
-                    break;
-                continue;
-            }
-            for (int k = 0; i < 3; i++)
-            {
-                memory[count][i] = tmp;
-                scanf("%c ", tmp);
-            }
-
-            scanf("%c ", tmp);
+            printf("%s ", string);
+            if (!strcmp(string, "000"))
+                break;
+            strcpy(memory[count], string);
+            scanf("%s ", string);
             count++;
         }
-
-        // n_instructions = resolv_program(&memory);
     }
+    int tesyt = resolv_program(&memory);
 }
