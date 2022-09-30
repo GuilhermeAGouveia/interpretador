@@ -135,7 +135,7 @@ int resolv_program(int *memory)
         }
     }
 
-    return i + 1;
+    return i + 1; // +1 because the last instruction is 100
 }
 
 void printArr(int *arr, int arr_size)
