@@ -168,9 +168,9 @@ void main(void)
                 // DEBUG(printf("%s ", string));
                 s = string; // reset read string
                 tmp = getchar();
-                if (tmp == '\n')
+                if (tmp == '\n' || tmp == EOF)
                 {
-                    // DEBUG(printf("fim de programa\n"));
+                    DEBUG(printf("fim de programa\n"));
                     break;
                 }
             }
